@@ -1,0 +1,34 @@
+/* #clients > .container > .list-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.form-control {
+    height: 80px;
+}
+
+.form-control>option {
+    height: 100%;
+}
+
+.type-select {
+    margin-bottom: 50px;
+}
+
+.estimate-builder{
+    display: flex;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+#range-type-select {
+    border: 5px blue solid;
+}
+
+#building-type-select {
+    border: 5px red solid;
+}
