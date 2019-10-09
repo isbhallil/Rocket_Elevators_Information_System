@@ -114,7 +114,6 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-<<<<<<< HEAD
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -127,8 +126,6 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-=======
->>>>>>> 63f5b840605917f21e33ad9be70900b3258eac0e
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -263,17 +260,11 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-<<<<<<< HEAD
   coffee-rails
   faker
-  jbuilder (~> 2.7)
-=======
-  chromedriver-helper
-  coffee-rails (~> 4.2)
   font-awesome-rails
-  jbuilder (~> 2.5)
+  jbuilder (~> 2.7)
   jquery-rails
->>>>>>> 63f5b840605917f21e33ad9be70900b3258eac0e
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
   puma (~> 3.11)
