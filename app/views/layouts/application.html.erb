@@ -6,10 +6,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="smoothscroll enable-animation">
+    <div id="wrapper">
+      <!-- HEADER -->
+      <%= render partial: 'header' %>
+
+      <!-- 1px line separator -->
+      <div id="top"></div>
+
+      <%= yield %>
+
+      <!-- FOOTER -->
+      <%= render partial: 'footer' %> 
+    </div>
   </body>
+
+  <script>
+    var plugin_path = 'assets/plugins/';
+  </script>
 </html>
