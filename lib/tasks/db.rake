@@ -1,4 +1,8 @@
+require 'bcrypt'
+
 namespace :db do
+  
+  
   desc "Drop, create, migrate, and repopulate with sample data"
   task repopulate: [:drop, :create, :migrate, :fakeit] do
   puts "Done"
@@ -11,7 +15,7 @@ namespace :db do
         firstname: Faker::Name.first_name,
         lastname: Faker::Name.last_name,
         email: Faker::Internet.email,
-        encrypted_password: Faker::Internet.password
+        encrypted_password: BCrypt::Password.create(Faker::Internet.password)
       )
   end
 end
