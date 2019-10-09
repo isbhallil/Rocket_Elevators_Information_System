@@ -16,5 +16,4 @@
 //= require turbolinks
 //= require_tree .
 //= require_tree ./plugins
-//= require rocket-elevator.js
-
+//= require_tree ./plugins/bootstrap

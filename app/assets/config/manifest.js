@@ -3,4 +3,4 @@
 //= link_tree ../images/portfolio-images
 //= link_directory ../javascripts .js
 //= link_directory ../stylesheets .css
-//= link_tree ../images/ png
+//= link_tree ../images/ 

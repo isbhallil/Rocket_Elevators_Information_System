@@ -10,13 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require_tree ./css
+ *= require css/bootstrap.min.css
+ *= require css/extralayers.css
+ *= require css/settings.css
+ *= require css/essentials.css
+ *= require css/layout.css
+ *= require css/header-1.css
+ *= require css/theme.css
+ *= require css/rocket-elevator.css
  */
- 
- @import "css/essentials.css";
- @import "css/header-1.css";
- @import "css/layout.css";
- @import "css/rocket-elevator.css";
- @import "css/theme.css";

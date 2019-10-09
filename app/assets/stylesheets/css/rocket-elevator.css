@@ -4,6 +4,9 @@
     align-items: center;
 } */
 
+#since-cta {
+    background-image: url('../one-elevator.jpg');
+}
 
 .form-control {
     height: 80px;

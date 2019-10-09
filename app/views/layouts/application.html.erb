@@ -11,7 +11,20 @@
 
   <body class="smoothscroll enable-animation">
     <div id="wrapper">
+      <!-- HEADER -->
+      <%= render partial: 'header' %>
+
+      <!-- 1px line separator -->
+      <div id="top"></div>
+
       <%= yield %>
+
+      <!-- FOOTER -->
+      <%= render partial: 'footer' %> 
     </div>
   </body>
+
+  <script>
+    var plugin_path = 'assets/plugins/';
+  </script>
 </html>
