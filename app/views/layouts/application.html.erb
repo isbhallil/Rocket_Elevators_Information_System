@@ -5,11 +5,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+<<<<<<< HEAD
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+=======
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
+>>>>>>> 63f5b840605917f21e33ad9be70900b3258eac0e
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="smoothscroll enable-animation">
+    <div id="wrapper">
+      <!-- HEADER -->
+      <%= render partial: 'header' %>
+
+      <!-- 1px line separator -->
+      <div id="top"></div>
+
+      <%= yield %>
+
+      <!-- FOOTER -->
+      <%= render partial: 'footer' %> 
+    </div>
   </body>
+
+  <script>
+    var plugin_path = 'assets/plugins/';
+  </script>
 </html>
