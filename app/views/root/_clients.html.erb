@@ -6,90 +6,11 @@
         </div>
 
         <ul class="row list-inline d-flex align-items-center">
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/iata-1.svg" 
-                         alt="iata-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/emmis-communications.svg"
-                         alt="ammis-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/hunkemoller.svg"
-                         alt="hunkmoller-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/klm-4.svg" 
-                         alt="klm-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/boiron-27692.svg"
-                         alt="boiron-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/au-la-plata-buenos-aires.svg"
-                         alt="alpba-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/designer-shoe-warehouse.svg"
-                         alt="dsw-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/advanta.svg"
-                         alt="advanta-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/salling-bank.svg"
-                         alt="salling-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/buick-5.svg" 
-                         alt="buick-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/sensient.svg"
-                         alt="sansient-logo" />
-                </a>
-            </li>
-            <li class="col-md-3 col-sm-3 col-6">
-                <a>
-                    <img class="img-fluid" 
-                         src="https://cdn.worldvectorlogo.com/logos/decibel-first.svg"
-                         alt="decbel-logo" />
-                </a>
-            </li>
+
+            <% clients.each do |client| %>
+              <%= render partial: 'client', locals: { imageSrc: client[0], name: client[1]} %>
+            <% end %>
+            
         </ul>
 
     </div>

@@ -1,0 +1,19 @@
+<%= render partial: 'common/page-header', :locals => {:title => "corporate services"} %>
+
+<section>
+    <div class="container">
+        
+        <%= render partial: 'common/lead', :locals => { :text => "We are proud to give our expertise to corporate clients, become one of our clients today"} %>
+
+        <article class="row">
+            <div class="col-md-6">
+                <!-- OWL SLIDER -->
+                <%= render partial: 'owl-carousel' %>
+                <!-- /OWL SLIDER -->
+            </div>
+            <div class="col-md-6">
+                <%= render partial: 'common/four-area-of-expertise' %>
+            </div>
+        </article>
+    </div>
+</section>

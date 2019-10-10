@@ -11,16 +11,13 @@
 <hr class="m-0" />
 
 <!-- AWARD -->
-<%= render partial: 'award' %>
+<%= render partial: 'award', locals: { tems:  @awards } %>
 
 <!-- TEAM -->
 <%= render partial: 'team' %>
 
 <!-- NEWS -->
-<%= render partial: 'news' %>
+<%= render partial: 'news', locals: { news: @news } %>
 
 <!-- CLIENTS -->
-<%= render partial: 'clients' %>
-
-<!-- CONTACT -->
-<%= render partial: 'contact' %>
+<%= render partial: 'clients', locals: { clients: @clients }%>
