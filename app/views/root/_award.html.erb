@@ -13,7 +13,7 @@
 
         <div id="portfolio" class="clearfix portfolio-isotope portfolio-isotope-3">
 
-            <% items.each do |item| %>
+            <% @awards.each do |item| %>
                 <%= render partial: 'portfolio-item', :locals => { :type => item[0], :name => item[1], :file => item[2]} %>
             <% end %>
 
