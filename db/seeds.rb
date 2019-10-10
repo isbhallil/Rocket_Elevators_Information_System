@@ -12,7 +12,6 @@
     Employees.create(firstname: 'David', lastname: 'Boutin', title: 'Engineer', email: 'david.boutin@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
     Employees.create(firstname: 'Remi', lastname: 'Gagnon', title: 'Engineer', email: 'remi.gagnon@codeboxx.biz', encrypted_password: BCrypt::Password.create( '12345678'))
     Employees.create(firstname: 'Mathieu', lastname: 'Lefrancois', title: 'Engineer', email: 'mathieu.lefrancois@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
-    Employees.create(firstname: 'Mathieu', lastname: 'Lefrancois', title: 'Engineer', email: 'mathieu.lefrancois@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
     Employees.create(firstname: 'Mathieu',lastname: 'Lortie', title: 'Engineer', email: 'mathieu.lortie@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
     Employees.create(firstname: 'Mathieu', lastname: 'Houde', title: 'Engineer', email: 'mathieu.houde@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
     Employees.create(firstname: 'Serge', lastname: 'Savoie', title: 'Engineer',  email: 'serge.savoie@codeboxx.biz',encrypted_password: BCrypt::Password.create('12345678'))
