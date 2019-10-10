@@ -5,7 +5,7 @@ ruby '2.6.3'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 
-
+gem 'devise'
 gem 'bcrypt'
 gem 'coffee-rails'
 gem 'faker'
