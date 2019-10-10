@@ -12,15 +12,18 @@
   <body class="smoothscroll enable-animation">
     <div id="wrapper">
       <!-- HEADER -->
-      <%= render partial: 'header' %>
+      <%= render partial: 'common/header', locals: {navs: @navs}%>
 
       <!-- 1px line separator -->
       <div id="top"></div>
 
       <%= yield %>
 
+      <!-- CONTACT -->
+      <%= render partial: 'common/contact' %>
+
       <!-- FOOTER -->
-      <%= render partial: 'footer' %> 
+      <%= render partial: 'common/footer' %> 
     </div>
   </body>
 

@@ -7,51 +7,11 @@
 
         <div class="owl-carousel owl-padding-10 buttons-autohide controlls-over"
             data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
-            <div class="img-hover">
-                <a href="https://www.theguardian.com/commentisfree/2019/sep/05/new-york-fear-elevators">
-                    <img class="img-fluid" src="https://i.guim.co.uk/img/media/11cbf448606a7ebca2e5fbc55bb7598ce8fbef22/0_231_6000_3600/master/6000.jpg?width=300&quality=85&auto=format&fit=max&s=833c8722e0c1dfdc52038f7fe30512f7" alt="">
-                </a>
+                
+            <% news.each do |item| %>
+                <%= render partial: 'news-item', :locals => { :link => item[0], :imageSrc => item[1], :title => item[2], :p => item[3]} %>
+            <% end %>
 
-                <h4 class="text-left mt-20"><a href="https://www.theguardian.com/commentisfree/2019/sep/05/new-york-fear-elevators">Rocket Elevators Launch in Europe</a></h4>
-                <p class="text-left">Europe is a new market. We, as a Team, will begin to provide our expertise in Paris, Berlin and London</p>
-
-            </div>
-            <div class="img-hover">
-                <a href="https://www.producer.com/2019/09/ph-to-buy-louis-dreyfus-elevators/">
-                    <img class="img-fluid" src="https://d31029zd06w0t6.cloudfront.net/wp-content/uploads/sites/54/2019/09/web1_Schroeder-Lee-RGB.jpg" alt="">
-                </a>
-
-                <h4 class="text-left mt-20"><a href="https://www.producer.com/2019/09/ph-to-buy-louis-dreyfus-elevators/">Thanks to Mr. Price</a></h4>
-                <p class="text-left">The CEO of Rocket Elevators will pursuit his dreams to fly in the sky, say welcome to the new one coming</p>
-            </div>
-            <div class="img-hover">
-                <a href="https://www.barrons.com/articles/otis-elevator-stock-united-technologies-split-51567546279">
-                    <img class="img-fluid" src="assets/david.jpg" alt="">
-                </a>
-                <h4 class="text-left mt-20"><a href="https://www.barrons.com/articles/otis-elevator-stock-united-technologies-split-51567546279">Say Hi to the new CEO !</a></h4>
-                <p class="text-left">As Mr Price has gone to the jungle we found a precious leader for the company. He has vision and leadership !</p>
-            </div>
-            <div class="img-hover">
-                <a href="https://ny.curbed.com/2019/9/4/20849423/nycha-elevators-public-housing-city-council">
-                    <img class="img-fluid" src="assets/mohammed.jpg" alt="">
-                </a>
-                <h4 class="text-left mt-20"><a href="https://ny.curbed.com/2019/9/4/20849423/nycha-elevators-public-housing-city-council">New Employee of the month</a></h4>
-                <p class="text-left">Yet another round of applause the Mohammed. He repeatedly ranked on top players in his duty at work</p>
-            </div>
-            <div class="img-hover">
-                <a href="https://www.businessinsider.com/report-after-elevator-crushes-man-nyc-tenant-rent-strike-2019-9">
-                    <img class="img-fluid" src="https://amp.businessinsider.com/images/5d6e75e32e22af71fc7f68f3-1334-1001.jpg" alt="">
-                </a>
-                <h4 class="text-left mt-20"><a href="https://www.businessinsider.com/report-after-elevator-crushes-man-nyc-tenant-rent-strike-2019-9">New Tech in Elevators Industries, patented by Rocket Rlrvators</a></h4>
-                <p class="text-left">A new way to climb stories, meet our teleportation portal. Launch in 2025</p>
-            </div>
-            <div class="img-hover">
-                <a href="https://famousbusinessman.com/2019/09/08/global-residential-elevators-market-2/">
-                    <img class="img-fluid" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/space-elevator-1567182025.jpg?resize=3840:*" alt="">
-                </a>
-                <h4 class="text-left mt-20"><a href="https://famousbusinessman.com/2019/09/08/global-residential-elevators-market-2/">New Patent By RocketElevators</a></h4>
-                <p class="text-left">We can now send good to the ISS. New Elevators that can go in space !</p>
-            </div>
         </div>
 
     </div>
