@@ -1,3 +1,6 @@
+// DOCUMENT READY
+$(document).ready(function () {
+
 const residentialForm = $('#residential-form');
 const commercialForm = $('#commercial-form');
 const corporateForm = $('#corporate-form');
@@ -142,15 +145,10 @@ const getInputsValueFrom = function (form) {
 const getSelectedItem = function (selectEl) {
   return { value: selectEl.find(":selected").text(), index: selectEl.find(":selected").index()}
 }
-
-// DOCUMENT READY
-$(document).ready(function () {
-  hideAll();
-  buildingTypeSelect.hide();
-})
-
+ 
 // RANGE SELECTION
-$('#range-type-select').bind('change' , function () {
+$('#range-type-select').bind('change', function () {
+  console.log("range-type-select")
   const selectedRange = getSelectedItem(rangeTypeSelect);
   const isRangeSelected = selectedRange.index != 0;
 
@@ -278,4 +276,8 @@ hybridForm.bind('input', function () {
   let totalLiftCages = liftCagesPerColumn * liftColumns;
 
   totalLiftCages > 0 ?  printPrice(totalLiftCages) : null ;
+})
+  
+hideAll();
+buildingTypeSelect.hide();
 })

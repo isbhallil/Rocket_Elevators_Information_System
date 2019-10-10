@@ -1,0 +1,39 @@
+<form id="corporate-form" class="row clearfix" method="post" action="">
+
+    <div class="col-lg-8 col-sm-7">
+        <div class="heading-title">
+            <h4>Corporate Building</h4>
+        </div>
+        <fieldset class="mt-60">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <label for="corporate-units">renting businesses </label>
+                    <input id="corporate-units" name="corporate[units]" type="number"
+                        class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="corporate-stories">stories</label>
+                    <input id="corporate-stories" name="corporate[stories]" type="number"
+                        class="form-control" required  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="corporate-basements">basements</label>
+                    <input id="corporate-basements" name="corporate[basements]" type="number"
+                        class="form-control" required  min="0"/>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <label for="corporate-parking-spaces">parking spaces</label>
+                    <input id="corporate-parking-spaces" name="corporate[parking-spaces]"
+                        type="number" class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="corporate-max-per-foor">Maximum occupants per floor
+                    </label>
+                    <input id="corporate-max-per-floor" name="corporate[max-per-floor]"
+                        type="number" class="form-control" required  min="0"/>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</form>
