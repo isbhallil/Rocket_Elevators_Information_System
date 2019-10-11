@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'root#index'
-  devise_for :employees 
+  devise_for :employees
   
   namespace :admin do
     resources :users

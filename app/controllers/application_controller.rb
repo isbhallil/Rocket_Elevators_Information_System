@@ -141,5 +141,8 @@ class ApplicationController < ActionController::Base
                 "decbel"
             ]
         ]
+
+        @employees = Employee.all
+        @users = User.all
     end 
 end
