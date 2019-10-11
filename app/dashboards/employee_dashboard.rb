@@ -13,7 +13,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     lastname: Field::String,
     title: Field::String,
     email: Field::String,
-    encrypted_password: Field::String,
+    password: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     reset_password_token: Field::String,
@@ -41,7 +41,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   lastname
   title
   email
-  encrypted_password
+  password
   created_at
   updated_at
   reset_password_token
@@ -57,7 +57,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   lastname
   title
   email
-  encrypted_password
+  password
   reset_password_token
   reset_password_sent_at
   remember_created_at

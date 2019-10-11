@@ -5,7 +5,7 @@ class Employees < ActiveRecord::Migration[5.2]
       t.string :lastname
       t.string :title
       t.string :email
-      t.string :encrypted_password
+      t.string :password
       t.timestamps
   end
 end
