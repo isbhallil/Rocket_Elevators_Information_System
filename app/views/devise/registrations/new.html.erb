@@ -36,6 +36,10 @@
                   <!-- Password -->
                   <div class="form-group">
                     <%= f.password_field :password, autofocus: true, class: 'form-control', placeholder: 'Password' %>
+                    <% if @minimum_password_length %>
+                      <br />
+                      <em><%= @minimum_password_length %> characters minimum</em>
+                    <% end %>
                   </div>
                   
                   <!-- Confirm password -->
