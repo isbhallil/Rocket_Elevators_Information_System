@@ -3,8 +3,8 @@
     <div class="container">
 
         <!-- Logo -->
-        <a class="logo float-left scrollTo" href="<%= root_path()%>#top">
-            <img src="assets/rocket-elevators-logo.png" alt="" />
+        <a class="logo float-left scrollTo" href="<%= root_path()%>">
+            <%= image_tag 'rocket-elevators-logo.png' %>
         </a>
 
         <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
@@ -12,10 +12,17 @@
                 <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                     
                     <% navs.each do |nav| %>
-                      <%= render partial: 'common/nav', locals: { title: nav[0] ,id: nav[1] } %>
+                      <%= render partial: 'common/nav-with-id', 
+                                 locals: { title: nav[0] ,id: nav[1] } %>
                     <% end %>
                     
-                    <%= render partial: 'common/nav-with-links', locals: {title: 'login', path: new_employee_session_path()} %>
+                    <% if user_signed_in? %>
+                        <%= render partial: 'common/nav-with-links', 
+                                   locals: { title: 'Edit Profile', path: edit_user_registration_path(), class: '', method: 'get' }%>
+                        <%= render partial: 'common/nav-with-links', locals: { title: 'Logout', path: destroy_user_session_path(), method: 'delete' ,class: '' }%>
+                    <% else %>
+                        <%= render partial: 'common/nav-with-links', locals: {title: 'login', path: new_user_session_path(), class: '', method: 'get'} %>
+                    <% end %>
                 </ul>
             </nav>
         </div>

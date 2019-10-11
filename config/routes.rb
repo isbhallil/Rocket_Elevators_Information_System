@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     root to: "users#index"
     end
   
-  get 'residential'   => 'residential#index'
-  get 'corporate'     => 'corporate#index'
-  get 'quote'         => 'quote#index'
+  get 'residential'   => 'root#residential'
+  get 'corporate'     => 'root#corporate'
+  get 'quote'         => 'root#quote'
   
 end

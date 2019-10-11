@@ -4,7 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'jquery-rails'
 gem "font-awesome-rails"
-
+gem 'owlcarousel-rails'
+gem 'jquery-turbolinks'
 
 
 gem 'devise'

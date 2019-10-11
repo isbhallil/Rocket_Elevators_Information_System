@@ -2157,7 +2157,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 
-.tp-loader.spinner5 	{	background:url(css/loader.gif) no-repeat 10px 10px;
+.tp-loader.spinner5 	{	background:url(fonts/loader.gif) no-repeat 10px 10px;
 							background-color:#fff;
 							margin:-22px -22px;
 							width:44px;height:44px;
@@ -2341,11 +2341,9 @@ zoom: 1;
 
 @font-face {
   font-family: 'revicons';
-  src: url('../font/revicons.eot?5510888');
-  src: url('../font/revicons.eot?5510888#iefix') format('embedded-opentype'),
-       url('../font/revicons.woff?5510888') format('woff'),
-       url('../font/revicons.ttf?5510888') format('truetype'),
-       url('../font/revicons.svg?5510888#revicons') format('svg');
+  src: url('fonts/revicons.eot?5510888');
+  src: url('fonts/revicons.eot?5510888#iefix') format('embedded-opentype'),
+       url('fonts/revicons.svg?5510888#revicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2355,7 +2353,7 @@ zoom: 1;
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'revicons';
-    src: url('../font/revicons.svg?5510888#revicons') format('svg');
+    src: url('fonts/revicons.svg?5510888#revicons') format('svg');
   }
 }
 */
