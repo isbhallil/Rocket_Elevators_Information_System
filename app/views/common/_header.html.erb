@@ -12,9 +12,10 @@
                 <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
                     
                     <% navs.each do |nav| %>
-                      <%= render partial: 'common/nav', locals: { title: nav[0].upcase! ,id: nav[1] } %>
+                      <%= render partial: 'common/nav', locals: { title: nav[0] ,id: nav[1] } %>
                     <% end %>
                     
+                    <%= render partial: 'common/nav-with-links', locals: {title: 'login', path: new_employee_session_path()} %>
                 </ul>
             </nav>
         </div>

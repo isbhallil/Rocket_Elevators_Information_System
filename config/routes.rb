@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'root#index'
-  devise_for :employees 
+  devise_for :employees
   
   namespace :admin do
     resources :users
