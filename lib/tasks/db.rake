@@ -4,7 +4,7 @@ namespace :db do
   
   
   desc "Drop, create, migrate, and repopulate with sample data"
-  task repopulate: [:drop, :create, :migrate, :fakeit] do
+  task repopulate: [:drop, :create, :migrate, :fakeit, :seed] do
   puts "Done"
   end
 

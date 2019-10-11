@@ -1,3 +1,3 @@
 class IndexController < ApplicationController
-    @employees = Employee.all
+     @employees = Employee.all
 end
