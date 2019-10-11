@@ -6,7 +6,7 @@
 
 
     require 'bcrypt'
-    
+    require 'devise'
    
     Employee.create(firstname: 'Nicolas', lastname: 'Genest', title: 'Comm rep', email: 'nicolas.genest@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
     Employee.create(firstname: 'David', lastname: 'Boutin', title: 'Engineer', email: 'david.boutin@codeboxx.biz', encrypted_password: BCrypt::Password.create('12345678'))
