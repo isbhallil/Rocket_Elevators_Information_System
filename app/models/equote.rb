@@ -1,0 +1,2 @@
+class Equote < ApplicationRecord
+end

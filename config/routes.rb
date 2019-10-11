@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :employees
+    resources :equotes
     root to: "users#index"
     end
   
