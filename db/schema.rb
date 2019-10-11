@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_143709) do
+ActiveRecord::Schema.define(version: 2019_10_11_184627) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "firstname"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 2019_10_11_143709) do
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_employees_on_email", unique: true
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
+  end
+
+  create_table "equotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "buildingtype"
+    t.string "range"
+    t.integer "floors"
+    t.integer "appartments"
+    t.integer "basements"
+    t.integer "busisnesses"
+    t.integer "maxperfloor"
+    t.integer "parkingplaces"
+    t.integer "elevatorshafts"
+    t.integer "hours"
+    t.float "elevatorcost"
+    t.float "setupfees"
+    t.float "totalprice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|

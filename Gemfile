@@ -6,7 +6,6 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 
 
-
 gem 'devise'
 gem 'bcrypt'
 gem 'coffee-rails'
