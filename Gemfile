@@ -7,7 +7,6 @@ gem "font-awesome-rails"
 gem 'owlcarousel-rails'
 gem 'jquery-turbolinks'
 
-
 gem 'devise'
 gem 'bcrypt'
 gem 'coffee-rails'
