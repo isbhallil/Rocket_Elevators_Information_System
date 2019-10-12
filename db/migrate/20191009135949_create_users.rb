@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.string :firstname
       t.string :lastname
+      t.boolean :admin, default: false
       t.string :email
       t.string :encrypted_password
       t.timestamps
