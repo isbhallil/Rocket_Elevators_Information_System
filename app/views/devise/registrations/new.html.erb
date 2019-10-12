@@ -36,6 +36,10 @@
                   <!-- Password -->
                   <div class="form-group">
                     <%= f.password_field :password, autofocus: true, class: 'form-control', placeholder: 'Password' %>
+                    <% if @minimum_password_length %>
+                      <br />
+                      <em><%= @minimum_password_length %> characters minimum</em>
+                    <% end %>
                   </div>
                   
                   <!-- Confirm password -->
@@ -52,7 +56,7 @@
                   </div>
                   
                   <div class="col-md-6 col-sm-6 col-6 text-right">
-                    <%= f.submit  "Create Employee", class:"btn btn-primary" %>
+                    <%= f.submit  "Create Account", class:"btn btn-primary" %>
                   </div>
                   
                 </div>
