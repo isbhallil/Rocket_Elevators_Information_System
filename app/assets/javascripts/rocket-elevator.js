@@ -112,6 +112,8 @@ const printPrice = function (totalLiftCages) {
 
   $("#estimate-range").html(budget.range);
   $("#estimate-total-elevators").html(budget.totalElevatorCount);
+  
+
   $("#estimate-elevators-cost").html(budget.getTotalElevatorCost());
   $("#estimate-setup-fees").html(budget.getSetupFee());
   $("#estimate-total").html(budget.getTotal());
@@ -225,9 +227,9 @@ commercialForm.bind('input', function () {
   
   let stories = inputsValues['commercial-stories'].value;
   let basements = inputsValues['commercial-basements'].value;
-  let parkingSpaces = inputsValues['commercial-parking-spaces'].value;
+  let parkingSpaces = inputsValues['commercial-parkingspaces'].value;
   
-  let elevatorshafts = inputsValues['commercial-elevator-shafts'].value;
+  let elevatorshafts = inputsValues['commercial-elevatorshafts'].value;
 
   let totalLiftCages = elevatorshafts;
   totalLiftCages > 0 ?  printPrice(totalLiftCages) : null ;
@@ -239,11 +241,11 @@ corporateForm.bind('input', function () {
   let inputsValues = getInputsValueFrom(corporateForm);
 
   let units = inputsValues['corporate-units'].value;
-  let parkingSpaces = inputsValues['corporate-parking-spaces'].value;
+  let parkingSpaces = inputsValues['corporate-parkingspaces'].value;
 
   let stories = inputsValues['corporate-stories'].value;
   let basements = inputsValues['corporate-basements'].value;
-  let maxPerFLoor = inputsValues['corporate-max-per-floor'].value;
+  let maxPerFLoor = inputsValues['corporate-maxperfloor'].value;
 
   let totalOccupants = maxPerFLoor * (stories + basements);
   let liftColumns = Math.round((stories + basements) / 20)
@@ -262,12 +264,12 @@ hybridForm.bind('input', function () {
   console.log(inputsValues);
 
   let units = inputsValues['hybrid-units'].value;
-  let parkingSpaces = inputsValues['hybrid-parking-spaces'].value;
+  let parkingSpaces = inputsValues['hybrid-parkingspaces'].value;
   let hours = inputsValues['hybrid-hours'].value;
 
   let stories = inputsValues['hybrid-stories'].value;
   let basements = inputsValues['hybrid-basements'].value;
-  let maxPerFLoor = inputsValues['hybrid-max-per-floor'].value;
+  let maxPerFLoor = inputsValues['hybrid-maxperfloor'].value;
 
   let totalOccupants = maxPerFLoor * (stories + basements);
   let liftColumns = Math.round((stories + basements) / 20)

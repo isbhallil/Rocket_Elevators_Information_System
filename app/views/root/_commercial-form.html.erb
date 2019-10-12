@@ -1,4 +1,4 @@
-<form id="commercial-form" class="row clearfix" method="post" action="">
+<form id="commercial-form" class="row clearfix" method="post" action="/new_equotes">
 
     <div class="col-lg-8 col-sm-7">
         <div class="heading-title">
@@ -18,17 +18,18 @@
                         class="form-control"  min="0"/>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <label for="commercial-parking-spaces">parking spaces</label>
-                    <input id="commercial-parking-spaces" name="commercial[parking-spaces]"
+                    <label for="commercial-parkingspaces">parking spaces</label>
+                    <input id="commercial-parkingspaces" name="commercial[parkingspaces]"
                         type="number" class="form-control"  min="0"/>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <label for="commercial-elevator-shafts">elevator shafts </label>
-                    <input required id="commercial-elevator-shafts" name="commercial[elevator-shafts]"
+                    <label for="commercial-elevatorshafts">elevator shafts </label>
+                    <input required id="commercial-elevatorshafts" name="commercial[elevatorshafts]"
                         type="number" class="form-control"  min="0"/>
                 </div>
 
             </div>
+            <button id="calc-estimate-btn" type="submit" class="col-md-8 btn btn-primary" >GET AN ESTIMATE</button>
         </fieldset>
     </div>
 </form>
