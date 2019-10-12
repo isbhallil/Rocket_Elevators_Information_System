@@ -112,6 +112,8 @@ const printPrice = function (totalLiftCages) {
 
   $("#estimate-range").html(budget.range);
   $("#estimate-total-elevators").html(budget.totalElevatorCount);
+  $("#qq").val(budget.totalElevatorCount);
+
   $("#estimate-elevators-cost").html(budget.getTotalElevatorCost());
   $("#estimate-setup-fees").html(budget.getSetupFee());
   $("#estimate-total").html(budget.getTotal());
