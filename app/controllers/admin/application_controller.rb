@@ -7,8 +7,10 @@
 module Admin
   class ApplicationController < Administrate::ApplicationController
     before_action :authenticate_admin
-
+    include Pundit
+    protect_from_forgery
     def authenticate_admin
+      
       # TODO Add authentication logic here.
     end
 
