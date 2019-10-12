@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get 'residential'   => 'root#residential'
   get 'corporate'     => 'root#corporate'
   get 'quote'         => 'root#quote'
-  
+  resources :equotes
+  post '/new_equotes' => "equotes#new_equote"
 end
