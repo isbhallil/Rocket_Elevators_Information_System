@@ -13,10 +13,111 @@
                 <%= f.select('building-type-select' , ['--- select a building type ---', 'residential', 'commercial', 'corporate', 'hybrid'], {}, {class: 'form-control'}) %>
             </div>
 
-            <!-- ESTIMATE BUILDER -->
-            <%= render partial: 'estimate-builder' %>
-        
-            <%= f.submit %>
+            <!-- RESIDENTIAL INPUTS-->
+            <div id='residential-form'>
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('how many appartments ?') %>
+                    <%= f.number_field('residential-appartments', {class: 'form-control residential-form'}) %>
+                </div>
+
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('residential-stories', {class: 'form-control residential-form'}) %>
+                </div>
+
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('How many basements ?') %>
+                    <%= f.number_field('residential-basements', {class: 'form-control residential-form'}) %>
+                </div>
+            </div>
+
+            <!-- COMMERCIAL INPUTS-->
+            <div id='commercial-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('commercial-stories', {class: 'form-control commercial-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('commercial-basements', {class: 'form-control commercial-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many parking spaces ?') %>
+                    <%= f.number_field('commercial-parking-spaces', {class: 'form-control commercial-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many elevator shafts ?') %>
+                    <%= f.number_field('commercial-elevator-shafts', {class: 'form-control commercial-form'}) %>
+                </div>
+            </div>
+
+            <!-- COMMERCIAL INPUTS-->
+            <div id='corporate-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('corporate-stories', {class: 'form-control corporate-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many units ?') %>
+                    <%= f.number_field('corporate-units', {class: 'form-control corporate-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('corporate-basements', {class: 'form-control corporate-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many parking spaces ?') %>
+                    <%= f.number_field('corporate-parking-spaces', {class: 'form-control corporate-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many maximum occupants per floor ?') %>
+                    <%= f.number_field('corporate-max-occupants', {class: 'form-control corporate-form'}) %>
+                </div>
+            </div>
+
+            <!-- HYBRID INPUTS-->
+            <div id='hybrid-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('hybrid-stories', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many units ?') %>
+                    <%= f.number_field('hybrid-units', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('hybrid-basements', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many parking spaces ?') %>
+                    <%= f.number_field('hybrid-parking-spaces', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many maximum occupants per floor ?') %>
+                    <%= f.number_field('hybrid-max-occupants', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many working hours per day ?') %>
+                    <%= f.number_field('hybrid-hours', {class: 'form-control hybrid-form'}) %>
+                </div>
+            </div>
+
+
+
+            <%= f.submit('Get A Quote Now!', class:'btn btn-success') %>
         <% end %>
     </div>
 </section>

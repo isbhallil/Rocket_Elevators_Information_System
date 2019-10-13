@@ -8,6 +8,54 @@
     background-image: url('../one-elevator.jpg');
 }
 
+#residential-form {
+    margin-bottom: 50px;
+    border-top: 5px yellow solid;
+    padding-top: 15px;
+}
+
+.residential-form {
+    border: 5px solid yellow;
+}
+
+#commercial-form {
+    margin-bottom: 50px;
+    border-top: 5px purple solid;
+    padding-top: 15px;
+}
+
+.commercial-form {
+    border: 5px solid purple;
+}
+
+#corporate-form {
+    margin-bottom: 50px;
+    border-top: 5px black solid;
+    padding-top: 15px;
+}
+
+.corporate-form {
+    border: 5px solid black;
+}
+
+
+
+#hybrid-form {
+    margin-bottom: 50px;
+    border-top: 5px green solid;
+    padding-top: 15px;
+}
+
+.hybrid-form {
+    border: 5px solid green;
+}
+
+.fancy-form {
+    margin-bottom: 25px;
+}
+
+
+
 .form-control {
     height: 80px;
 }

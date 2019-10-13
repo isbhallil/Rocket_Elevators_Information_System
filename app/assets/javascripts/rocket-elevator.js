@@ -10,6 +10,7 @@ const buildingTypeSelect = $('#building-type-select');
 const calcBtn = $("#calc-estimate-btn");
 const estimateEl = $("#estimate");
 
+
 const budgetFeesRatios = {
   standard: {
     range: 'standard',
@@ -167,33 +168,34 @@ $('#range-type-select').bind('change', function () {
 })
 
 // DISPLAY PROPER FORM ACCORDING TO BUILDING TYPE
-  $('#building-type-select').change(function () {
-  console.log('ok')
-  let buildingType = getSelectedItem(buildingTypeSelect)
-    
-
-// const residentialForm = $('#residential-form');
-// const commercialForm = $('#commercial-form');
-// const corporateForm = $('#corporate-form');
-// const hybridForm = $('#hybrid-form');
+  $('#building-type-select').change(function (ev) {
   
+  
+  let buildingType = getSelectedItem(buildingTypeSelect)
+  console.log('buildingType: ', buildingType)  
+
+  const residentialForm = $('#residential-form');
+  const commercialForm = $('#commercial-form');
+  const corporateForm = $('#corporate-form');
+  const hybridForm = $('#hybrid-form');
+    
   switch (buildingType.value) {
-    case 'Residential':
+    case 'residential':
       hideAll();
       showElement(residentialForm);
       break;
 
-    case 'Corporate':
+    case 'corporate':
       hideAll();
       showElement(corporateForm);
       break;
 
-    case 'Commercial':
+    case 'commercial':
       hideAll();
       showElement(commercialForm);
       break;
 
-    case 'Hybrid':
+    case 'hybrid':
       hideAll();
       showElement(hybridForm);
       break;
@@ -213,7 +215,6 @@ $('#calc-estimate-btn').click(function(){
 residentialForm.bind('input', function () {
   // {residential-appartments, residential-stories, residential-basements}
   let inputsValues = getInputsValueFrom(residentialForm);
-  console.log("inputsValues: ", inputsValues);
   let basements = inputsValues['residential-basements'].value;
 
   let appartments = inputsValues['residential-appartments'].value;
