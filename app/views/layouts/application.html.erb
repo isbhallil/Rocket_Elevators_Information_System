@@ -6,10 +6,27 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <!-- HEADER -->
+    <%= render partial: 'common/header', locals: { navs: @navs}%>
+
     <%= yield %>
+
+    <!-- CONTACT -->
+    <%= render partial: 'common/contact' %>
+
+    <!-- FOOTER -->
+    <%= render partial: 'common/footer' %> 
+
   </body>
+
+  
+
+  <script>
+    var plugin_path = 'assets/plugins/';
+  </script>
+
 </html>

@@ -1,0 +1,22 @@
+<%= render partial: 'common/page-header', :locals => {:title => "residential services"} %>
+
+<section>
+    <div class="container">
+        
+        <%= render partial: 'common/lead', :locals => { :text => "We are proud to give our expertise to residential clients, become one of our clients today"} %>
+
+        <!-- BORN TO BE A WINNER -->
+        <article class="row">
+            <div class="col-md-6">
+                <!-- OWL SLIDER -->
+                <%= render partial: 'residential-owl-carousel' %>
+                <!-- /OWL SLIDER -->
+            </div>
+            <div class="col-md-6">
+                <%= render partial: 'common/four-area-of-expertise' %>
+            </div>
+        </article>
+        <!-- /BORN TO BE A WINNER -->
+
+    </div>
+</section>

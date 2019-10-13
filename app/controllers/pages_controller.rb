@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
 
     def root
-        @time = Time.now
+    end
+
+    def quote
     end
 end

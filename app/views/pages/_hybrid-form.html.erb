@@ -1,0 +1,47 @@
+<form id="hybrid-form" class="row clearfix" method="post" action="/new_equotes">
+
+    <div class="col-lg-8 col-sm-7">
+        <div class="heading-title">
+            <h4>Hybrid Building</h4>
+        </div>
+        <fieldset class="mt-60">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-stories">Stories </label>
+                    <input id="hybrid-stories" name="hybrid[stories]" type="number"
+                        class="form-control" required  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-basements">Basements</label>
+                    <input id="hybrid-basements" name="hybrid[basements]" type="number"
+                        class="form-control" required  min="0"/>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-parkingspaces">Parking Spaces</label>
+                    <input id="hybrid-parkingspaces" name="hybrid[parkingspaces]"
+                        type="number" class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-units">Number of Units
+                    </label>
+                    <input id="hybrid-units" name="hybrid[units]"
+                        type="number" class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-elevatorshafts">Maximum Occupants Per Floor
+                    </label>
+                    <input id="hybrid-elevatorshafts" name="hybrid[occupants]"
+                        type="number" class="form-control" required  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="hybrid-hours">Hours of activity
+                    </label>
+                    <input id="hybrid-hours" name="hybrid[hours]"
+                        type="number" class="form-control " max="24" min="0" />
+                </div>
+            </div>
+            <button id="calc-estimate-btn" type="submit" class="col-md-8 btn btn-primary" >GET AN ESTIMATE</button>
+        </fieldset>
+    </div>
+</form>

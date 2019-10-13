@@ -1,0 +1,29 @@
+<form id="residential-form" class="row clearfix" method="post" action="/new_equotes">
+
+    <div class="col-lg-8 col-sm-7">
+        <div class="heading-title">
+            <h4>Residential Building</h4>
+        </div>
+
+        <fieldset class="mt-60">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <label for="residential-appartments">appartments</label>
+                    <input required id="residential-appartments" name="residential[appartments]" type="number"
+                        class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="residential-stories">stories </label>
+                    <input required id="residential-stories" name="residential[stories]" type="number"
+                        class="form-control"  min="0"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="residential-basements">basements</label>
+                    <input id="residential-basements" name="residential[basements]" type="number"
+                        class="form-control"  min="0"/>
+                </div>
+            </div>
+            <button id="calc-estimate-btn" type="submit" class="col-md-8 btn btn-primary" >GET AN ESTIMATE</button>
+        </fieldset>
+    </div>
+</form>

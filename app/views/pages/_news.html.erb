@@ -1,0 +1,18 @@
+<section id="news" class="alternate">
+    <div class="container">
+
+        <div class="heading-title  text-center">
+            <h2>News & Press Release</h2>
+        </div>
+
+        <div class="owl-carousel owl-padding-10 buttons-autohide controlls-over"
+            data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
+                
+            <% news.each do |item| %>
+                <%= render partial: 'news-item', :locals => { new: item } %>
+            <% end %>
+
+        </div>
+
+    </div>
+</section>

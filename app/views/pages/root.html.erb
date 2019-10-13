@@ -1,4 +1,25 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= @time %>
-</p>
+<hr class="m-0" id="top"/>
+
+<!-- HERO-SLIDER -->
+<%= render partial: 'hero-slider' %>
+
+<!-- SERVICES -->
+<%= render partial: 'services' %>
+
+<!-- SINCE-CTA -->
+<%= render partial: 'since-cta' %>
+
+<!-- 1px line separator -->
+<hr class="m-0" />
+
+<!-- AWARD -->
+<%= render partial: 'award', locals: { tems:  @awards } %>
+
+<!-- TEAM -->
+<%= render partial: 'team' %>
+
+<!-- NEWS -->
+<%= render partial: 'news', locals: { news: @news } %>
+
+<!-- CLIENTS -->
+<%= render partial: 'clients', locals: { clients: @clients }%>

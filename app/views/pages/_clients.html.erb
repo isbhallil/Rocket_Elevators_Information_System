@@ -1,0 +1,17 @@
+<section id="clients">
+    <div class="container">
+
+        <div class="heading-title text-center">
+            <h2>Our Clients</h2>
+        </div>
+
+        <ul class="row list-inline d-flex align-items-center">
+
+            <% clients.each do |client| %>
+              <%= render partial: 'client', locals: { client: client } %>
+            <% end %>
+            
+        </ul>
+
+    </div>
+</section>

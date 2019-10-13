@@ -1,0 +1,17 @@
+<div class="portfolio-item has-title <%= award.building_type %>">
+    <div class="item-box">
+        <figure>
+            <span class="item-hover">
+                <span class="overlay dark-5"></span>
+            </span>
+
+            <!-- overlay title -->
+            <div class="item-box-overlay-title">
+                <h3><%= award.building_name %> </h3>
+            </div><!-- /overlay title -->
+
+            <img class="img-fluid" src="/assets/portfolio-images/<%= award.building_file%>.jpg"
+                width="600" height="399" alt="<%= award.building_name %>%">
+        </figure>
+    </div>
+</div>
