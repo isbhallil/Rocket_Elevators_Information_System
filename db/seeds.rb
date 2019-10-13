@@ -158,3 +158,4 @@ navs =  [
 navs.each do |nav|
     Nav.create({title: nav[0], id_name: nav[1]})
 end
+
