@@ -38,6 +38,10 @@
     border: 5px solid black;
 }
 
+.quote-print {
+    border: 5px solid orange;
+    padding: 15px;
+}
 
 
 #hybrid-form {

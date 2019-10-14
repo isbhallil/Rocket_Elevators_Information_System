@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # QuotesController
   get 'quote' => 'quotes#new'
   post 'quote' => 'quotes#create'
-  get 'contact'=> 'quotes#contact'
+  get 'print'=> 'quotes#print'
 end
