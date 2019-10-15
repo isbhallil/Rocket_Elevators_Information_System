@@ -1,8 +1,5 @@
-<%= form_with(model: product, local: true, :html => {multipart: true}) do |form| %>
+
 <section id="contact" class="alternate">  
-    % if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
     <div class="container">
 
         <header class="text-center mb-60">
@@ -39,7 +36,7 @@
                 </div><!-- /Alert Mandatory -->
     
     
-                <form action="" method="post" enctype="multipart/form-data">
+               <form id="contact" class="row clearfix" method="post" action="/leads">
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
     
@@ -62,7 +59,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="contact:subject">Project Name *</label>
-                                <input required type="text" value="" class="form-control" name="contact[subject][required]"
+                                <input required type="text" value="" class="form-control" name="contact[project][required]"
                                     id="contact:subject">
                             </div>
                             <div class="col-md-4">
@@ -84,6 +81,13 @@
                             <div class="col-md-12">
                                 <label for="contact:message">Message *</label>
                                 <textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]"
+                                    id="contact:message"></textarea>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="contact:message">Project description*</label>
+                                <textarea required maxlength="10000" rows="8" class="form-control" name="contact[project]"
                                     id="contact:message"></textarea>
                             </div>
                         </div>
@@ -139,4 +143,3 @@
     
     </div>                   
 </section>
-<%end%>

@@ -2,14 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-<<<<<<< HEAD
-<<<<<<< HEAD
 gem 'mini_magick', '~> 4.9', '>= 4.9.5'
-=======
->>>>>>> parent of abd2368... controller, uploader,table and model created
 gem 'carrierwave', '~> 2.0', '>= 2.0.2'
-=======
->>>>>>> parent of 4c3882d... uploader and table created
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'owlcarousel-rails'
@@ -17,6 +11,7 @@ gem 'jquery-turbolinks'
 gem 'pundit'
 gem 'devise'
 gem 'bcrypt'
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'coffee-rails'
 gem 'faker'
 gem 'administrate', '~> 0.12.0'
@@ -38,7 +33,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -73,4 +68,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

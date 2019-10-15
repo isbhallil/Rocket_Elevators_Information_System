@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_184627) do
+ActiveRecord::Schema.define(version: 2019_10_15_173137) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "firstname"
@@ -28,6 +28,39 @@ ActiveRecord::Schema.define(version: 2019_10_11_184627) do
   end
 
   create_table "equotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "buildingtype"
+    t.string "range"
+    t.integer "floors"
+    t.integer "appartments"
+    t.integer "basements"
+    t.integer "busisnesses"
+    t.integer "maxperfloor"
+    t.integer "parkingplaces"
+    t.integer "elevatorshafts"
+    t.integer "hours"
+    t.float "elevatorcost"
+    t.float "setupfees"
+    t.float "totalprice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "full_name"
+    t.string "enterprise_name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "immovable_project_name"
+    t.string "project_description"
+    t.string "departement_in_charge_of_elevators"
+    t.string "message"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "buildingtype"
     t.string "range"
     t.integer "floors"
