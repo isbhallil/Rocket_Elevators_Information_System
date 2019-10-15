@@ -1,0 +1,17 @@
+class CreateElevators < ActiveRecord::Migration[6.0]
+  def change
+    create_table :elevators do |t|
+      t.references :column, foreign_key, null: false
+      t.integer :serial_number, null: false
+      t.string :model_type, null: false
+      t.string :building_type, null: false
+      t.string :status
+      t.date :date_of_installation
+      t.date :date_of_inspection
+      t.string :inspection_certificate
+      t.text :information
+      t.text :notes
+      t.timestamps
+    end
+  end
+end

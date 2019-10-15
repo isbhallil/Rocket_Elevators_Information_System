@@ -1,0 +1,10 @@
+class CreateBuildingDetails < ActiveRecord::Migration[6.0]
+  def change
+    create_table :building_details do |t|
+      t.references :building, foreign_key, null: false
+      t.string :info_key
+      t.string :value
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,15 @@
+class CreateBuildings < ActiveRecord::Migration[6.0]
+  def change
+    create_table :buildings do |t|
+      t.references :address, foreign_key, null: false
+      t.references :customer, foreign_key, null: false
+      t.string :full_name_admin_person
+      t.string :email_admin_person
+      t.string :phone_number_admin_person
+      t.string :full_name_tech_person
+      t.string :email_tech_person
+      t.string :phone_number_tech_person
+      t.timestamps
+    end
+  end
+end

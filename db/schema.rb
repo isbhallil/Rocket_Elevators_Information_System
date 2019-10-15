@@ -45,6 +45,24 @@ ActiveRecord::Schema.define(version: 2019_10_11_184627) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "buildingtype"
+    t.string "range"
+    t.integer "floors"
+    t.integer "appartments"
+    t.integer "basements"
+    t.integer "busisnesses"
+    t.integer "maxperfloor"
+    t.integer "parkingplaces"
+    t.integer "elevatorshafts"
+    t.integer "hours"
+    t.float "elevatorcost"
+    t.float "setupfees"
+    t.float "totalprice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
