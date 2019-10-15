@@ -1,6 +1,6 @@
-class DropTables < ActiveRecord::Migration[6.0]
+class CreateLeads < ActiveRecord::Migration[6.0]
   def change
-    drop_table :leads do |t|
+    create_table :leads do |t|
       t.string :name
       t.string :full_name
       t.string :enterprise_name
