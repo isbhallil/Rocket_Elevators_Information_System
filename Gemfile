@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'owlcarousel-rails'
 gem 'jquery-turbolinks'
-
+gem 'carrierwave', '~> 2.0', '>= 2.0.2'
 gem 'devise'
 gem 'bcrypt'
 gem 'coffee-rails'
