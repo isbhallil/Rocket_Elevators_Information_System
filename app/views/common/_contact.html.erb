@@ -1,4 +1,8 @@
+<%= form_with(model: product, local: true, :html => {multipart: true}) do |form| %>
 <section id="contact" class="alternate">  
+    % if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
     <div class="container">
 
         <header class="text-center mb-60">
@@ -135,3 +139,4 @@
     
     </div>                   
 </section>
+<%end%>
