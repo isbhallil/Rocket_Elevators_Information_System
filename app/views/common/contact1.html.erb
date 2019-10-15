@@ -36,7 +36,7 @@
                 </div><!-- /Alert Mandatory -->
     
     
-               <form id="contact" class="row clearfix"  action="/leads">
+                <%= form_with model: @lead do |f| %>
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
     
@@ -67,15 +67,10 @@
                                 <input required type="text" value="" class="form-control" name="contact[subject][required]"
                                     id="contact:subject">
                             </div>
-                            <div class="col-md-4">
-                                <label for="contact_department">Department</label>
-                                <select class="form-control pointer" name="contact[department]">
-                                    <option value="">--- Select ---</option>
-                                    <option value="Marketing">Marketing</option>
-                                    <option value="Webdesign">Webdesign</option>
-                                    <option value="Architecture">Architecture</option>
-                                </select>
-                            </div>
+                              <div class="fancy-form fancy-form-select type-select">
+                
+                <%= f.select('departement' , ['--- select a departement  ---', 'residential', 'commercial', 'corporative','hybrid'], {}, {class: 'form-control'}) %>
+            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -111,7 +106,7 @@
                                 MESSAGE</button>
                         </div>
                     </div>
-                </form>
+                <%end%>
     
             </div>
             <!-- /FORM -->

@@ -17,7 +17,7 @@ class LeadUploader < CarrierWave::Uploader::Base
   # For images you might use something like this:
   def extension_white_list
     %w(pdf jpg jpeg png txt)    
- end
+  end
 
 
 

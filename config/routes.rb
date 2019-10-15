@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'corporate'     => 'root#corporate'
   get 'quote'         => 'root#quote'
   resources :equotes
+  resources :root
+  get '/leads' => 'root#create'
   post '/new_equotes' => "equotes#new_equote"
-  post '/leads' =>'root#index'
+  #post '/leads' =>'root#index'
 end
