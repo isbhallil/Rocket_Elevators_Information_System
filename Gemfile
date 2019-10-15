@@ -9,7 +9,7 @@ gem 'jquery-turbolinks'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
 gem "awesome_print", require:"ap" 
-
+gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record

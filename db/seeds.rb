@@ -1,3 +1,6 @@
+require 'bcrypt'
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -158,3 +161,40 @@ navs =  [
 navs.each do |nav|
     Nav.create({title: nav[0], id_name: nav[1]})
 end
+
+
+
+
+# list d'employee
+ 
+employees = [
+    {first_name: 'Nicolas', last_name: 'Genest', title: 'Comm rep', email: 'nicolas.genest@codeboxx.biz'},
+    {first_name: 'David', last_name: 'Boutin', title: 'Engineer', email: 'david.boutin@codeboxx.biz'},
+    {first_name: 'Remi', last_name: 'Gagnon', title: 'Engineer', email: 'remi.gagnon@codeboxx.biz'},
+    {first_name: 'Mathieu', last_name: 'Lefrancois', title: 'Engineer', email: 'mathieu.lefrancois@codeboxx.biz'},
+    {first_name: 'Mathieu',last_name: 'Lortie', title: 'Engineer', email: 'mathieu.lortie@codeboxx.biz'},
+    {first_name: 'Mathieu', last_name: 'Houde', title: 'Engineer', email: 'mathieu.houde@codeboxx.biz'},
+    {first_name: 'Serge', last_name: 'Savoie', title: 'Engineer',  email: 'serge.savoie@codeboxx.biz'},
+    {first_name: 'Nadya', last_name: 'Fortier', title: 'Director', email: 'nadya.fortier@codeboxx.biz'},
+    {first_name: 'Martin', last_name: 'Chantal', title: 'Engineer', email: 'martin.chantal@codeboxx.biz'}
+]
+
+# def createEmployee(employee)
+#     @employee = Employee.new(employee)
+#     @employee.user.build({email: employee.email, password: BCrypt::Password.create(12345678)})
+    
+#     if @mod1.try(:save)
+#       puts 'employee saved'
+#     else
+#       puts 'no saved'
+#     end
+# end
+
+
+# employees.each do |employee|
+#     createEmployee(employee)
+# end
+
+
+
+
