@@ -1,7 +1,7 @@
 class CreateElevators < ActiveRecord::Migration[6.0]
   def change
     create_table :elevators do |t|
-      t.references :column, foreign_key, null: false
+      t.references :column, foreign_key: {on_delete: :cascade, on_update: :cascade}, null: false
       t.integer :serial_number, null: false
       t.string :model_type, null: false
       t.string :building_type, null: false

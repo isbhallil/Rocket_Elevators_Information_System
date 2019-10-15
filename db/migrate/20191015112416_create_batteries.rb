@@ -1,8 +1,8 @@
 class CreateBatteries < ActiveRecord::Migration[6.0]
   def change
     create_table :batteries do |t|
-      t.references :building, foreign_key, null: false
-      t.references :employee, foreign_key
+      t.references :building, foreign_key: {on_delete: :cascade, on_update: :cascade}, null: false
+      t.references :employee, foreign_key: {on_delete: :cascade, on_update: :cascade}
       t.string :building_type, null: false
       t.string :status
       t.date :date_of_installation
