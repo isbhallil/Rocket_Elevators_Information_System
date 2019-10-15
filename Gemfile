@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+<<<<<<< HEAD
 gem 'mini_magick', '~> 4.9', '>= 4.9.5'
 gem 'carrierwave', '~> 2.0', '>= 2.0.2'
+=======
+>>>>>>> parent of 4c3882d... uploader and table created
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'owlcarousel-rails'
