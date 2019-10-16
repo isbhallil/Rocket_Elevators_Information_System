@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2019_10_15_113142) do
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "battery_id", null: false
     t.string "building_type", null: false
-    t.integer "floor_nubmer", null: false
+    t.integer "floor_number"
     t.string "status"
     t.text "information"
     t.text "notes"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 2019_10_15_113142) do
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "address_id", null: false
+    t.bigint "address_id"
     t.bigint "user_id"
     t.date "date_of_creation"
     t.string "company_name", null: false
