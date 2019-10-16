@@ -179,21 +179,25 @@ employees = [
     {first_name: 'Martin', last_name: 'Chantal', title: 'Engineer', email: 'martin.chantal@codeboxx.biz'}
 ]
 
-# def createEmployee(employee)
-#     @employee = Employee.new(employee)
-#     @employee.user.build({email: employee.email, password: BCrypt::Password.create(12345678)})
+def createEmployee(employee)
+    @employee = Employee.new(employee)
+
+    ap " EMPLOYEE ============================================"
+    ap @employee
+    ap " EMPLOYEE ============================================"
+    @employee.user.build({email: employee.email, encrypted_password: BCrypt::Password.create(12345678)})
     
-#     if @mod1.try(:save)
-#       puts 'employee saved'
-#     else
-#       puts 'no saved'
-#     end
-# end
+    if @employee.try(:save)
+      puts 'employee saved'
+    else
+      puts 'no saved'
+    end
+end
 
 
-# employees.each do |employee|
-#     createEmployee(employee)
-# end
+employees.each do |employee|
+    createEmployee(employee)
+end
 
 
 
