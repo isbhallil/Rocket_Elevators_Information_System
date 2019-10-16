@@ -54,5 +54,5 @@
     # Employee.create(firstname: 'Jonathan', lastname: 'Fortin-Dominguez', title: 'Tech', email:'fortin.jonathan@gmail.com')
     # Employee.create(firstname: 'Jesus', lastname: 'De Nazareth', title: 'DIEU', email: 'jesus@gmail.com')
     # Employee.create(firstname: 'Bob', lastname: 'Graton', title: 'Elvis', email: 'bob@gmail.com')
-    Lead.create(name:'tets',full_name:'cedrick',enterprise_name:'codeboxx',email:'bob@bfob.com',phone_number:'418-666-6666',immovable_project_name:'codeboxx',project_description: 'a project description',departement_in_charge_of_elevators:'residential',message:'a massage to support team',image: "quote.jpg")
+    Lead.create(name:'tets',full_name:'cedrick',enterprise_name:'codeboxx',email:'bob@bfob.com',phone_number:'418-666-6666',immovable_project_name:'codeboxx',project_description: 'a project description',departement_in_charge_of_elevators:'residential',message:'a massage to support team')
                                                                                                                                                                                                                                    

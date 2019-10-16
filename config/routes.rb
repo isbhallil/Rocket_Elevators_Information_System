@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users
     resources :employees
     resources :equotes
+    resources :leads
     root to: "users#index"
     end
   
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get 'quote'         => 'root#quote'
   resources :equotes
   resources :root
-  get '/leads' => 'leads#create'
+  get "/leads" => 'leads#create'
   post '/new_equotes' => "equotes#new_equote"
   #post '/leads' =>'root#index'
 end

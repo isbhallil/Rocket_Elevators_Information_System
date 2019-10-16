@@ -1,140 +1,123 @@
+<%= render partial: 'common/page-header', :locals => { :title => "get a quote"} %>
 
-<section id="contact" class="alternate">  
+<section id="request-form">
     <div class="container">
+        <%= form_with model: @quote do |f| %>        
+            <!-- RANGE SELECTOR -->
+            <div class="fancy-form fancy-form-select type-select">
+                <%= f.label("Choose your elevator's model") %>
+                <%= f.select('range-type-select' , ['--- select a range  ---', 'standard', 'premium', 'excelium'], {}, {class: 'form-control'}) %>
+            </div>
 
-        <header class="text-center mb-60">
-            <h2>Contact Us</h2>
-        </header>
-    
-    
-        <div class="row">
-    
-            <!-- FORM -->
-            <div class="col-md-8 col-sm-8">
-    
-                <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
-    
-    
-                <!-- Alert Success -->
-                <div id="alert_success" class="alert alert-success mb-30">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Thank You!</strong> Your message successfully sent!
-                </div><!-- /Alert Success -->
-    
-    
-                <!-- Alert Failed -->
-                <div id="alert_failed" class="alert alert-danger mb-30">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>[SMTP] Error!</strong> Internal server error!
-                </div><!-- /Alert Failed -->
-    
-    
-                <!-- Alert Mandatory -->
-                <div id="alert_mandatory" class="alert alert-danger mb-30">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-                </div><!-- /Alert Mandatory -->
-    
-    
-                <%= form_with model: @lead do |f| %>
-                    <fieldset>
-                        <input type="hidden" name="action" value="contact_send" />
-    
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="contact:name">Full Name *</label>
-                                <input required type="text" value="" class="form-control" name="contact[name][required]"
-                                    id="contact:name">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="contact:email">E-mail Address *</label>
-                                <input required type="email" value="" class="form-control" name="contact[email][required]"
-                                    id="contact:email">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="contact:phone">Phone</label>
-                                <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="contact:subject">Project Name *</label>
-                                <input required type="text" value="" class="form-control" name="contact[project][required]"
-                                    id="contact:subject">
-                            </div>
-                            <div class="col-md-4">
-                                <label for="contact:subject">Compagny Name *</label>
-                                <input required type="text" value="" class="form-control" name="contact[subject][required]"
-                                    id="contact:subject">
-                            </div>
-                              <div class="fancy-form fancy-form-select type-select">
-                
-                <%= f.select('departement' , ['--- select a departement  ---', 'residential', 'commercial', 'corporative','hybrid'], {}, {class: 'form-control'}) %>
+            <!-- BUILDING-TYPE SELECTOR -->
+            <div class="fancy-form fancy-form-select type-select" id="building-type-wrapper">
+                <%= f.label("What's your project type ?") %>
+                <%= f.select('building-type-select' , ['--- select a building type ---', 'residential', 'commercial', 'corporate', 'hybrid'], {}, {class: 'form-control'}) %>
             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label for="contact:message">Message *</label>
-                                <textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]"
-                                    id="contact:message"></textarea>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label for="contact:message">Project description*</label>
-                                <textarea required maxlength="10000" rows="8" class="form-control" name="contact[project]"
-                                    id="contact:message"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label for="contact:attachment">File Attachment</label>
-    
-                                <!-- custom file upload -->
-                                <input class="custom-file-upload" type="file" id="file" name="contact[attachment]"
-                                    id="contact:attachment" data-btn-text="Select a File" />
-                                <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-    
-                            </div>
-                        </div>
-    
-                    </fieldset>
-    
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND
-                                MESSAGE</button>
-                        </div>
-                    </div>
-                <%end%>
-    
-            </div>
-            <!-- /FORM -->
-    
-    
-            <!-- INFO -->
-            <div class="col-md-4 col-sm-4">
-    
-                <h2>Visit Us</h2>
-    
-                <div id="map2" class="h-400">
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=codeboxx&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/blog/nordvpn-coupon-code/"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:400px;}</style></div>
+
+            <!-- RESIDENTIAL INPUTS-->
+            <div id='residential-form'>
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('how many appartments ?') %>
+                    <%= f.number_field('residential-appartments', {class: 'form-control residential-form', value: 0}) %>
                 </div>
-    
-                <hr />
-    
-                <p>
-                    <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 418-725 Boulevard Lebourgneuf, Québec, QC G2J 0C4</span>
-                    <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a
-                            href="tel:1418-465-4300">+1 (418) 265-4300</a></span>
-                    <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a
-                            href="mailto:is.bhallil@codeboxx.com">is.bhallil@codeboxx.com</a></span>
-                </p>
-    
+
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('residential-stories', {class: 'form-control residential-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form fancy-form-select">
+                    <%= f.label('How many basements ?') %>
+                    <%= f.number_field('residential-basements', {class: 'form-control residential-form', value: 0}) %>
+                </div>
             </div>
-            <!-- /INFO -->
-    
-        </div>
-    
-    </div>                   
+
+            <!-- COMMERCIAL INPUTS-->
+            <div id='commercial-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('commercial-stories', {class: 'form-control commercial-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('commercial-basements', {class: 'form-control commercial-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many parking spaces ?') %>
+                    <%= f.number_field('commercial-parking-spaces', {class: 'form-control commercial-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many elevator shafts ?') %>
+                    <%= f.number_field('commercial-elevator-shafts', {class: 'form-control commercial-form', value: 0}) %>
+                </div>
+            </div>
+
+            <!-- CORPORATE INPUTS-->
+            <div id='corporate-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('corporate-stories', {class: 'form-control corporate-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many units ?') %>
+                    <%= f.number_field('corporate-units', {class: 'form-control corporate-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('corporate-basements', {class: 'form-control corporate-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many parking spaces ?') %>
+                    <%= f.number_field('corporate-parking-spaces', {class: 'form-control corporate-form', value: 0}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many maximum occupants per floor ?') %>
+                    <%= f.number_field('corporate-max-occupants', {class: 'form-control corporate-form', value: 0}) %>
+                </div>
+            </div>
+
+            <!-- HYBRID INPUTS-->
+            <div id='hybrid-form'>
+                <div class="fancy-form">
+                    <%= f.label('how many stories ?') %>
+                    <%= f.number_field('hybrid-stories', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many units ?') %>
+                    <%= f.number_field('hybrid-units', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('how many basements ?') %>
+                    <%= f.number_field('hybrid-basements', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many parking spaces ?') %>
+                    <%= f.number_field('hybrid-parking-spaces', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many maximum occupants per floor ?') %>
+                    <%= f.number_field('hybrid-max-occupants', {class: 'form-control hybrid-form'}) %>
+                </div>
+
+                <div class="fancy-form">
+                    <%= f.label('How many working hours per day ?') %>
+                    <%= f.number_field('hybrid-hours', {class: 'form-control hybrid-form'}) %>
+                </div>
+            </div>
+
+            <%= f.submit('Get A Quote Now!', class:'btn btn-success', id:'submit-quote') %>
+        <% end %>
+    </div>
 </section>

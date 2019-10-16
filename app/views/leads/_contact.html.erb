@@ -34,9 +34,10 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
                 </div><!-- /Alert Mandatory -->
-    
-    
-               <form id="contact" class="row clearfix"  action="/leads">
+
+    <form action="http://localhost:3000/api/v1/items"
+      enctype="multipart/form-data"
+      >
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
     
@@ -105,11 +106,12 @@
     
                     </fieldset>
     
-                    
-                        
+                    <div class="row">
+                        <div class="col-md-12">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND
                                 MESSAGE</button>
-                    
+                        </div>
+                    </div>
                 </form>
     
             </div>
