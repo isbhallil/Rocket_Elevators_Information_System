@@ -1,3 +1,3 @@
 class Lead < ApplicationRecord
-    mount_uploader :image, LeadUploader
+   # belong_to LeadsController
 end

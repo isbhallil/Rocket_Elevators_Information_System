@@ -16,6 +16,7 @@ gem 'coffee-rails'
 gem 'faker'
 gem 'administrate', '~> 0.12.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'awesome_print', '~> 1.8'
 gem 'rails', '~> 6.0.0'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4'
