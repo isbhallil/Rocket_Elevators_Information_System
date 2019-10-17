@@ -312,6 +312,7 @@ csv.each do |row|
 end 
 puts '***BUILDING Details***'
 
+employee_id_array = [*1..100]
 
 csv_text = File.read(Rails.root.join('lib', 'seed', 'battery.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -337,6 +338,7 @@ csv.each do |row|
 end
 puts '***BATTERY COMPLETED***'
 
+    battery_id_array=[*1..100]
 
     csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
     csv_text = File.read(Rails.root.join('lib', 'seed', 'column.csv'))
@@ -344,7 +346,7 @@ puts '***BATTERY COMPLETED***'
     csv.each do |row| 
         t = Column.new  
         t.id = row['Id']
-        t.battery = Battery.first
+        t.battery_id = battery_id_array.sample
         t.building_type = row['building_type']
         t.floor_number = row['floor_number']
         t.status = row['status']

@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_10_15_194231) do
     t.string "status"
     t.date "date_of_installation"
     t.date "date_of_inspection"
-    t.integer "operation_certificate"
+    t.string "operation_certificate"
     t.text "information"
     t.text "notes"
     t.datetime "created_at", null: false
