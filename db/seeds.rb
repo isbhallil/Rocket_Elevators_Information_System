@@ -20,9 +20,6 @@ employees.each do |e|
     user = User.create!({:email => e[:email], :password => "12345678", :password_confirmation => "12345678" })
     employee = Employee.create({user: user, first_name: e[:first_name], last_name: e[:last_name], title: e[:title], email: e[:email], encrypted_password: BCrypt::Password.create(12345678)})
 
-    ap user
-    ap employee
-    ap e
 end
 
 
