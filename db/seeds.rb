@@ -18,7 +18,8 @@ employees = [
 
 employees.each do |e|
     user = User.create!({:email => e[:email], :password => "12345678", :password_confirmation => "12345678" })
-    employee = Employee.create({user: user, first_name: e['first_name'], last_name: e['last_name'], title: e['title'], email: e['email']})
+    employee = Employee.create({user: user, first_name: e[:first_name], last_name: e[:last_name], title: e[:title], email: e[:email], encrypted_password: BCrypt::Password.create(12345678)})
+
 end
 
 
@@ -190,7 +191,7 @@ end
 
 
 
-user_id_customer  =[*60..999]
+user_id_customer  =[*(Employee.count+1)..User.count]
 
 
 
@@ -278,8 +279,8 @@ csv.each do |row|
 
 end
   
-employee_id_array =[*1..59]
-building_id_array =[*1..100]
+employee_id_array =[*1..Employee.count]
+building_id_array =[*1..Building.count]
 
 csv_text = File.read(Rails.root.join('lib', 'seed', 'battery.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -302,7 +303,7 @@ csv.each do |row|
 end
 
 
-    battery_id_array =[*1..100]
+    battery_id_array =[*1..Battery.count]
     floor_number_array =[*1..125]
 
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')

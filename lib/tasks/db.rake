@@ -11,7 +11,6 @@ namespace :db do
 
   task users: :environment do
     1000.times do
-      ap "task users"
       User.create!(
         email: Faker::Internet.email,
         # encrypted_password: BCrypt::Password.create(Faker::Internet.password)
