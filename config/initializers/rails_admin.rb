@@ -39,8 +39,12 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
+    config.excluded_models = ["Award", "Client", "Nav", "New"]
+    
     ## With an audit adapter, you can add:
     # history_index
     # history_show
   end
+
+  
 end

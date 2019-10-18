@@ -15,10 +15,11 @@ namespace :db do
       User.create!(
         email: Faker::Internet.email,
         # encrypted_password: BCrypt::Password.create(Faker::Internet.password)
-        encrypted_password: Faker::Internet.password
+        encrypted_password: 12345678
       )
     end
   end
+
 
   task quotes: :environment do
     50.times do
