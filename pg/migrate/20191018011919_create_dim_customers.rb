@@ -7,7 +7,6 @@ class CreateDimCustomers < ActiveRecord::Migration[5.2]
       t.string    :email
       t.integer   :elevators_count
       t.string    :city
-
     end
   end
 end
