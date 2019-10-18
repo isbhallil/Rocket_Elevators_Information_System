@@ -5,6 +5,7 @@ default: &default_pg
   username: 
   password: 
 
+
 development:
   <<: *default_pg
   database: pg_dev
