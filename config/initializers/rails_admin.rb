@@ -4,10 +4,7 @@ RailsAdmin.config do |config|
     redirect_to main_app.root_path unless current_user.is_admin?
   end
   
-  # config.actions do
-  #   all # NB: comment out this line for RailsAdmin < 0.6.0
-  #   charts
-  # end
+  
   
   ### Popular gems integration
 
