@@ -3,7 +3,11 @@ RailsAdmin.config do |config|
   config.authorize_with do
     redirect_to main_app.root_path unless current_user.is_admin?
   end
-
+  
+  # config.actions do
+  #   all # NB: comment out this line for RailsAdmin < 0.6.0
+  #   charts
+  # end
   
   ### Popular gems integration
 
@@ -38,6 +42,8 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+    all
+    charts
 
     config.excluded_models = ["Award", "Client", "Nav", "New"]
     

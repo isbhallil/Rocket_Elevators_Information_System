@@ -5,6 +5,7 @@ default: &default_pg
   username: postgres
   password: test
 
+
 development:
   <<: *default_pg
   database: pg_dev
