@@ -4,23 +4,23 @@ namespace :db do
 
 
   desc "Drop, create, migrate, and repopulate with sample data"
-  task repopulate: [:drop, :create, :migrate, :fakeit, :seed] do
+  task repopulate: [:drop, :create, :migrate, :users, :quotes, :seed] do
   puts "Done"
   end
 
-  desc "TODO"
-  task fakeit: :environment do
+
+  task users: :environment do
     1000.times do
+      ap "task users"
       User.create!(
         email: Faker::Internet.email,
         # encrypted_password: BCrypt::Password.create(Faker::Internet.password)
         encrypted_password: Faker::Internet.password
       )
+    end
   end
-end
 
-desc "TODO"
-  task fakeit: :environment do
+  task quotes: :environment do
     50.times do
       Quote.create!(
         building_type: Faker::Construction.material,
