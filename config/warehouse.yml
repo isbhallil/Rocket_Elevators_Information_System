@@ -1,9 +1,9 @@
 default: &default_pg
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: 15
   username: postgres
-  password: 
+  password: test
 
 development:
   <<: *default_pg
@@ -14,3 +14,4 @@ development:
 #   database: pg_prod
 #   username: Rocket_Elevators_Information_System
 #   password: <%= ENV['ROCKET_ELEVATORS_INFORMATION_SYSTEM_DATABASE_PASSWORD'] %>
+
