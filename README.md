@@ -19,3 +19,8 @@ Le nombre de demandes uniques (QuoteId) groupées par Mois (Date de création)
 SELECT company_name, elevators_count FROM dim_customers
 GROUP BY company_name, elevators_count
 ORDER BY elevators_count;
+
+
+In order to generate the mysql db the command to use id rake db:repopulate
+
+In order to generate the postgres db the command to use is rake pg:reset and then afterwards rake pg:etl
