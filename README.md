@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Number of single request (ContactId) created by month (Creation date)
+SELECT COUNT(id), to_char( creation_date, 'yyyy-mm')
+FROM fact_contacts
+GROUP BY to_char( creation_date, 'yyyy-mm')
+ORDER BY to_char( creation_date, 'yyyy-mm')
 
-* Ruby version
+## Unique number of single monthly requests. (Creation dates)
+SELECT extract(YEAR FROM submited_at) AS YEAR, extract(MONTH FROM submited_at) AS MONTH, COUNT(quote_id)
+FROM      fact_quotes
+GROUP BY  YEAR, MONTH
+ORDER BY  YEAR, MONTH
 
-* System dependencies
+Le nombre de demandes uniques (QuoteId) groupées par Mois (Date de création)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Number elevators in each building belonging to each customers
+SELECT company_name, elevators_count FROM dim_customers
+GROUP BY company_name, elevators_count
+ORDER BY elevators_count;
