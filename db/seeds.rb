@@ -184,8 +184,6 @@ navs.each do |nav|
     Nav.create({title: nav[0], id_name: nav[1]})
 end
 
-
-
 user_id_array  =[*(Employee.count+1)..User.count]
 
 csv_text = File.read(Rails.root.join('lib', 'seed', 'address.csv'))
@@ -193,6 +191,28 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
         t = Address.new
         t.id = row['id']
+        t.address_type = row['address_type']
+        t.status = row['status']
+        t.entity = row['entity']
+        t.number_street = row['number_street']
+        t.apt_number = row['apt_number']
+        t.city = row['city']
+        t.postal_code = row['postal_code']
+        t.country = row['country']
+        t.notes = row['notes']
+        t.created_at = row['created_at']
+        t.updated_at = row['updated_at']
+
+        t.save!
+end
+
+user_id_array  =[*(Employee.count+1)..User.count]
+
+csv_text = File.read(Rails.root.join('lib', 'seed', 'address.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+        t = Address.new
+        # t.id = row['id']
         t.address_type = row['address_type']
         t.status = row['status']
         t.entity = row['entity']
@@ -215,7 +235,7 @@ address_id_array = [*1..Address.count]
 csv_text = File.read(Rails.root.join('lib', 'seed', 'customer.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
-  t = Customer.new   
+  t = Customer.new
   t.user_id = user_id_array.delete(user_id_array.sample)
   t.address_id = address_id_array.delete(address_id_array.sample)
   t.date_of_creation = row['date_of_creation']
@@ -229,8 +249,8 @@ csv.each do |row|
   t.email_service_person = row['email_service_person']
   t.created_at = row['created_at']
   t.updated_at = row['updated_at']
-  t.save!  
-end  
+  t.save!
+end
 
 customer_id_array = [*1..Customer.count]
 
@@ -255,7 +275,7 @@ csv.each do |row|
 
 end
 
-       
+
 
 csv_text = File.read(Rails.root.join('lib', 'seed', 'buildingdetail.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -270,7 +290,7 @@ csv.each do |row|
 
 
 end
-  
+
 employee_id_array =[*1..Employee.count]
 building_id_array =[*1..Building.count]
 
@@ -299,18 +319,12 @@ end
     floor_number_array =[*1..125]
 
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv_text = File.read(Rails.root.join('lib', 'seed', 'column.csv')) 
-csv.each do |row| 
-    t = Column.new  
-    t.battery_id = battery_id_array.delete(battery_id_array.sample)
-    t.building_type = row['building_type']
     t.floor_number = floor_number_array.delete(floor_number_array.sample)
     t.status = row['status']
     t.information = row['information']
-    t.notes = row['notes']
     t.created_at = row['created_at']
-    t.updated_at = row['updated_at'] 
-    t.save!    
+    t.updated_at = row['updated_at']
+    t.save!
 end
 
 column_id_array =[*1..Column.count]
@@ -318,7 +332,7 @@ column_id_array =[*1..Column.count]
 csv_text = File.read(Rails.root.join('lib', 'seed', 'elevator.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
-    t = Elevator.new   
+    t = Elevator.new
     t.id = row['Id']
     t.column_id = column_id_array.sample
     t.serial_number = row['serial_number']
