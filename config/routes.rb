@@ -4,11 +4,13 @@ Rails.application.routes.draw do
 
   # PagesController
   root 'pages#root'
-  get 'residential' => 'pages#resideantial'
+  get 'residential' => 'pages#residential'
   get 'corporate' => 'pages#corporate'
 
   # QuotesController
   get 'quote' => 'quotes#new'
   post 'quote' => 'quotes#create'
   get 'print'=> 'quotes#print'
+  resources :lead
+  post '/lead' => 'root#index'
 end
